@@ -1,0 +1,118 @@
+{
+  "stage_id": "1013R_R223F_CARRIER_SLOT_MAPPING_AND_IMPLEMENTATION_GATE",
+  "created_at": "2026-07-08T19:46:51.752587+00:00",
+  "status": "PASS_LOCAL_CARRIER_SLOT_MAPPING_GATE",
+  "boundary": {
+    "formal_ui": false,
+    "r97b_modified": false,
+    "frontend_backend_modified": false,
+    "runtime_enabled": false,
+    "provider_model_prompt_db": false,
+    "formal_apply": false,
+    "real_component_interaction": false
+  },
+  "validator": "validate_1013R_R223F_carrier_slot_mapping_gate.py",
+  "validator_result": "validate_1013R_R223F_carrier_slot_mapping_gate_result.json",
+  "recommended_review_order": [
+    "R223F_carrier_slot_mapping.md",
+    "R223F_render_slot_state_model.json",
+    "R223F_collapse_expand_state_contract.md",
+    "R223F_mode_switch_contract.md",
+    "R223F_binding_preview_carrier_policy.md",
+    "R223F_bottom_input_local_note_policy.md",
+    "R223F_implementation_gate_report.md"
+  ],
+  "file_count": 19,
+  "files": [
+    {
+      "path": "_REFERENCE_INPUTS/R223D/R223D_bottom_input_non_chat_visual_policy.md",
+      "bytes": 870,
+      "sha256": "98100692F0441A32251CFB7519671C2E436447014E512AFEE2150BEA64B74EA9"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223D/R223D_carrier_layout_options.md",
+      "bytes": 1383,
+      "sha256": "0507AD024FC497BEF07B50EE0DF5BDEEE477F3A05AE82229FD9EDE08D12F520F"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223D/R223D_default_collapse_expand_policy.json",
+      "bytes": 1144,
+      "sha256": "9F1D79E28557FE5CC26CE7A48462066B1B69D4EEF04607B91E361AE1FE811C48"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223D/R223D_visual_density_review.md",
+      "bytes": 2092,
+      "sha256": "AAD90CE913DC8F918F53CA3783A107FFDED6B89289D8BC0AD4843CE1F55157CA"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223E/R223E_density_compliance_check.md",
+      "bytes": 1320,
+      "sha256": "538DAE0DD48F0641B32BECDA818FD0D0F599C50A759C01E33A16A0C3D739FC99"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223E/R223E_screenshot_smoke_result.md",
+      "bytes": 1817,
+      "sha256": "788D12520386E60FD5A82EC6097FD8B2DD75E6175F72548BC8D695B0C67E7F37"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223E/R223E_static_visual_mock_spec.md",
+      "bytes": 1552,
+      "sha256": "ECAFC29A68FE5D72741AE20E96F341E13B9C3ED13417A0F0327CF8E2238E2613"
+    },
+    {
+      "path": "_REFERENCE_INPUTS/R223E/R223E_static_visual_mock_state.json",
+      "bytes": 931,
+      "sha256": "540CA07D7C99CD3CF3D1624349A357E755FC77314723A96DA3EE13E505893277"
+    },
+    {
+      "path": "R223F_binding_preview_carrier_policy.md",
+      "bytes": 1604,
+      "sha256": "02A3A4B8C7EFC8F179E1F9806FEB1465F97296D56CEE94738C6F64C4C2171162"
+    },
+    {
+      "path": "R223F_bottom_input_local_note_policy.md",
+      "bytes": 1131,
+      "sha256": "0F5ABCA44C8691989B3223304C560162D3753BF8E8FF254A68BA6833CC9409A4"
+    },
+    {
+      "path": "R223F_carrier_slot_mapping.md",
+      "bytes": 3624,
+      "sha256": "DFE09F96E0EA709B7B6583731B101814227B18A35F11FBE5EFC8E57B76507FF5"
+    },
+    {
+      "path": "R223F_collapse_expand_state_contract.md",
+      "bytes": 2432,
+      "sha256": "E6B5C1126625E6F127F708E45E4D501F3E1825BFC379DC9A926FE7CC6CEAB9DA"
+    },
+    {
+      "path": "R223F_implementation_gate_report.md",
+      "bytes": 1834,
+      "sha256": "4A28D300AAE30E6844E76A1DF201559B242EB9F4C591603530783B707CD895EC"
+    },
+    {
+      "path": "R223F_mode_switch_contract.md",
+      "bytes": 1984,
+      "sha256": "BD74FB2A2445272BF9D34075D66E25569296D04D46FA0DE83F94E3A037824214"
+    },
+    {
+      "path": "R223F_render_slot_state_model.json",
+      "bytes": 5234,
+      "sha256": "59FE56A368771DF62A07BB7FC09253175BC823EFB61CA2F22389FAF5E33EF87E"
+    },
+    {
+      "path": "README_FOR_GPT_REVIEW.md",
+      "bytes": 841,
+      "sha256": "9C8E8AEBFAF8ADC345CC055D9F4AD551737D005343BCCE76BAA1225130603C23"
+    },
+    {
+      "path": "validate_1013R_R223F_carrier_slot_mapping_gate.py",
+      "bytes": 6558,
+      "sha256": "95BB1F8A3811016ADFBD31F6F0170BB866D6FDA1E031D33EE1EE3E6D9BCCB3A0"
+    },
+    {
+      "path": "validate_1013R_R223F_carrier_slot_mapping_gate_result.json",
+      "bytes": 84,
+      "sha256": "979BCCB604D132D69BD173179AC7B31A83F01679E7FA57FEC11C6EC9BFCE38C0"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "stage_id": "1013R_R223D_STATIC_VISUAL_DENSITY_AND_CARRIER_REVIEW",
+  "artifact": "default_collapse_expand_policy",
+  "status": "static_visual_density_review_only",
+  "ui_implementation": false,
+  "r97b_modified": false,
+  "default_open": [
+    "prep_canvas",
+    "focused_section_card",
+    "current_component_suggestion_strip"
+  ],
+  "default_collapsed": [
+    "ordinary_source_assumptions",
+    "ordinary_material_gaps",
+    "non_selected_component_bindings",
+    "full_reasoning_chain"
+  ],
+  "always_visible_until_resolved": [
+    "high_risk_confirmation",
+    "selected_mode",
+    "focused_section_title",
+    "evidence_bottom_line"
+  ],
+  "open_on_focus": [
+    "selected_component_binding_preview",
+    "component_media_requirements",
+    "component_evidence_output"
+  ],
+  "density_guards": {
+    "max_components_daily": 3,
+    "max_components_quick": 2,
+    "bottom_input_weight": "lower_than_prep_canvas_and_component_strip",
+    "binding_preview_policy": "selected_component_only",
+    "ordinary_gap_policy": "folded_by_default",
+    "high_risk_policy": "visible_until_teacher_resolves"
+  }
+}

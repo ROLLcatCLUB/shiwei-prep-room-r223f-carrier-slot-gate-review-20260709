@@ -1,0 +1,33 @@
+{
+  "stage_id": "1013R_R223E_STATIC_VISUAL_MOCK_FIXTURE",
+  "status": "static_visual_mock_only",
+  "created_at": "2026-07-09T03:32:54",
+  "ui_implementation": false,
+  "r97b_modified": false,
+  "frontend_backend_modified": false,
+  "runtime_enabled": false,
+  "provider_model_prompt_db": false,
+  "formal_apply": false,
+  "default_open": [
+    "prep_canvas",
+    "focused_section_card",
+    "current_component_suggestion_strip"
+  ],
+  "default_collapsed": [
+    "ordinary_source_assumptions",
+    "ordinary_material_gaps",
+    "full_reasoning_chain",
+    "non_selected_component_bindings"
+  ],
+  "visible_until_resolved": [
+    "high_risk_confirmation"
+  ],
+  "daily_component_count": 3,
+  "quick_component_count": 2,
+  "bottom_input_policy": "local_note_only_low_visual_weight",
+  "mock_variants": [
+    "daily_default_density",
+    "component_focus_preview",
+    "quick_3_minute_readability"
+  ]
+}

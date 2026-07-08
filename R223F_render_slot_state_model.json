@@ -1,0 +1,129 @@
+{
+  "stage_id": "1013R_R223F_CARRIER_SLOT_MAPPING_AND_IMPLEMENTATION_GATE",
+  "status": "static_carrier_slot_contract_only",
+  "boundary": {
+    "formal_ui": false,
+    "r97b_modified": false,
+    "frontend_backend_modified": false,
+    "runtime_enabled": false,
+    "provider_model_prompt_db": false,
+    "formal_apply": false,
+    "real_component_interaction": false
+  },
+  "carrier_pattern": "center_canvas_with_collapsible_side_rails",
+  "slots": [
+    {
+      "slot_id": "prep_workbench.mode_switch_slot",
+      "source_region": "mode_rail",
+      "default_state": "visible_compact",
+      "allowed_modes": ["precision", "daily", "quick"],
+      "canary_status": "fixture_static_only",
+      "blocked_behaviors": ["runtime_mode_generation", "model_call", "route_binding"]
+    },
+    {
+      "slot_id": "prep_workbench.source_risk_slot",
+      "source_region": "left_source_gap_rail",
+      "default_state": "collapsed_except_high_risk",
+      "always_visible": ["high_risk_confirmation"],
+      "collapsed_by_default": ["ordinary_source_assumptions", "ordinary_material_gaps", "full_reasoning_chain"],
+      "canary_status": "candidate_only",
+      "blocked_behaviors": ["full_evidence_browser", "database_query", "runtime_gap_resolution"]
+    },
+    {
+      "slot_id": "prep_workbench.prep_canvas_slot",
+      "source_region": "center_prep_canvas",
+      "default_state": "open_primary",
+      "priority": "highest",
+      "contains": ["focused_section_slot", "lesson_projection_body"],
+      "canary_status": "required_for_future_static_canary",
+      "blocked_behaviors": ["formal_r97b_apply", "runtime_writeback"]
+    },
+    {
+      "slot_id": "prep_workbench.focused_section_slot",
+      "source_region": "focused_section_card",
+      "default_state": "open_embedded_in_canvas",
+      "visible_fields": ["teacher_action", "student_action", "material_need", "evidence_bottom_line"],
+      "canary_status": "required_for_future_static_canary",
+      "blocked_behaviors": ["detached_card_stack", "full_reasoning_dump"]
+    },
+    {
+      "slot_id": "prep_workbench.component_suggestion_slot",
+      "source_region": "current_component_suggestion_strip",
+      "default_state": "open_for_current_section",
+      "density_limits": {
+        "daily_max": 3,
+        "quick_max": 2
+      },
+      "visible_fields": ["component_name", "student_problem", "evidence_output", "media_need", "confirm_replace_delete"],
+      "canary_status": "candidate_only",
+      "blocked_behaviors": ["global_12_component_shelf", "component_marketplace", "all_lesson_component_dump"]
+    },
+    {
+      "slot_id": "prep_workbench.binding_preview_slot",
+      "source_region": "right_binding_preview",
+      "default_state": "closed_until_component_focus",
+      "open_policy": "selected_component_only",
+      "visible_bindings": ["screen_prompt", "learning_sheet", "teacher_language", "assessment_evidence"],
+      "canary_status": "candidate_only",
+      "blocked_behaviors": ["all_component_bindings_open", "right_rail_takeover", "runtime_component_execution"]
+    },
+    {
+      "slot_id": "prep_workbench.quick_projection_slot",
+      "source_region": "quick_mode_block",
+      "default_state": "visible_in_quick_mode_only",
+      "readability_target": "3_minute_readable",
+      "density_limits": {
+        "quick_max_components": 2
+      },
+      "canary_status": "candidate_only",
+      "blocked_behaviors": ["daily_detail_expansion_by_default", "precision_reasoning_dump"]
+    },
+    {
+      "slot_id": "prep_workbench.local_note_slot",
+      "source_region": "bottom_local_note_input",
+      "default_state": "compact_low_weight",
+      "input_scope": "current_section_local_constraint_only",
+      "allowed_placeholders": [
+        "补充本环节材料限制...",
+        "添加本班情况说明...",
+        "给这个组件加一条本地要求..."
+      ],
+      "forbidden_placeholders": [
+        "问我任何问题...",
+        "继续聊天生成...",
+        "告诉小教你想怎么改整份教案..."
+      ],
+      "canary_status": "candidate_only",
+      "blocked_behaviors": ["global_chat_composer", "whole_lesson_regeneration", "model_prompt_entry"]
+    }
+  ],
+  "state_transitions": [
+    {
+      "event": "mode_select_daily",
+      "from": "any_mode",
+      "to": "daily_projection_view",
+      "visible_slots": ["mode_switch_slot", "source_risk_slot", "prep_canvas_slot", "focused_section_slot", "component_suggestion_slot", "local_note_slot"],
+      "component_limit": 3
+    },
+    {
+      "event": "mode_select_quick",
+      "from": "any_mode",
+      "to": "quick_projection_view",
+      "visible_slots": ["mode_switch_slot", "prep_canvas_slot", "quick_projection_slot", "component_suggestion_slot", "local_note_slot"],
+      "component_limit": 2
+    },
+    {
+      "event": "component_focus",
+      "from": "focused_section_view",
+      "to": "selected_component_binding_preview",
+      "opens": ["binding_preview_slot"],
+      "closes_or_keeps_folded": ["non_selected_component_bindings"]
+    },
+    {
+      "event": "teacher_resolves_high_risk",
+      "from": "high_risk_visible",
+      "to": "ordinary_risk_folded",
+      "changes": ["high_risk_confirmation becomes resolved_badge_or_folded_item"]
+    }
+  ]
+}

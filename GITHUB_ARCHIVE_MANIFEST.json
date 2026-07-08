@@ -1,0 +1,25 @@
+﻿{
+    "repository":  "ROLLcatCLUB/shiwei-prep-room-r223f-carrier-slot-gate-review-20260709",
+    "stage_id":  "1013R_R223F_CARRIER_SLOT_MAPPING_AND_IMPLEMENTATION_GATE",
+    "status":  "PASS_LOCAL_CARRIER_SLOT_MAPPING_GATE",
+    "validator":  {
+                      "passed":  true,
+                      "checks":  61,
+                      "failed":  0
+                  },
+    "zip":  {
+                "file":  "review_packages/1013R_R223F_CARRIER_SLOT_MAPPING_AND_IMPLEMENTATION_GATE_REVIEW.zip",
+                "sha256":  "B7C6A25B5F5D2379BB1857F347722ADD6F18197661A5777AAE88ECA89F37591F",
+                "entry_count":  19,
+                "backslash_entries":  false
+            },
+    "boundary":  {
+                     "formal_ui":  false,
+                     "r97b_modified":  false,
+                     "frontend_backend_modified":  false,
+                     "runtime_enabled":  false,
+                     "provider_model_prompt_db":  false,
+                     "formal_apply":  false,
+                     "real_component_interaction":  false
+                 }
+}
